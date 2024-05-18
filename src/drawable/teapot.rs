@@ -24,8 +24,8 @@ impl Teapot {
 
         let use_gourad = false;
 
-        let v_gourad_src = "../shaders/gourad_vertex.glsl";
-        let v_blinn_phong_src = "../shaders/blinn_phong_vertex.glsl";
+        let v_gourad_src = "src/shaders/gourad_vertex.glsl";
+        let v_blinn_phong_src = "src/shaders/blinn_phong_vertex.glsl";
         let vertex_shader_file = if use_gourad {
             v_gourad_src
         } else {
@@ -34,8 +34,8 @@ impl Teapot {
         let vertex_shader_src = fs::read_to_string(vertex_shader_file).unwrap();
         let vertex_shader_src = vertex_shader_src.as_str();
 
-        let f_gourad_src = "../shaders/gourad_fragment.glsl";
-        let f_blinn_phong_src = "../shaders/blinn_phong_fragment.glsl";
+        let f_gourad_src = "src/shaders/gourad_fragment.glsl";
+        let f_blinn_phong_src = "src/shaders/blinn_phong_fragment.glsl";
         let fragment_shader_file = if use_gourad {
             f_gourad_src
         } else {
@@ -70,7 +70,7 @@ impl Teapot {
             [0.0, 0.0, 0.0, 1.0f32],
         ];
 
-        let light = [-2.5, 0.4, 0.9f32];
+        let light = [-5.5, 0.4, 0.9f32];
 
         target
             .draw(
